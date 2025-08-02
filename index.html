@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>H4MDiL HA$AN | Portfolio</title>
-    <link rel="icon" href="image/image.png">
+    <link rel="icon" href="images/image.png">
     <link rel="stylesheet" href="style.css" />
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
@@ -15,20 +15,31 @@
     <!-- Header & Hero Section -->
     <header>
         <nav>
-            <div class="logo">&lt;HHP/&gt; H4MDiL HA$AN</div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <a href="Docx/CV_of_HamdilHasan.pdf" class="resume-btn" download>Resume</a>
+            <span class="logo">&lt;HHP/&gt; H4MDiL HA$AN</span>
+            <button class="nav-toggle" aria-label="Open navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Experience</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="resume-link">Resume</a></li>
             </ul>
         </nav>
+        <script>
+            // Simple JS for toggling navigation on mobile
+            document.querySelector('.nav-toggle').onclick = function () {
+                document.querySelector('.nav-links').classList.toggle('open');
+            };
+        </script>
         <section class="hero" id="home">
             <div class="hero-left">
                 <div class="profile-container">
-                    <img src="Image/flower.jpg" alt="Profile Photo" class="profile-img" />
+                    <img src="Images/flower.jpg" alt="Profile Photo" class="profile-img" />
                     <!-- <span class="badge">Available for hire</span> -->
                     <div class="social-icons">
                         <a href="https://www.linkedin.com/in/hamdil-hasan-p101/" title="LinkedIn"><i
@@ -70,9 +81,9 @@
             </div>
         </section>
         <a href="#skills" class="scroll-btn">
-      <span>Scroll to Explore</span>
-      <span class="arrow">&#8595;</span>
-    </a>
+            <span>Scroll to Explore</span>
+            <span class="arrow">&#8595;</span>
+        </a>
     </header>
 
     <!-- Skills Section -->
@@ -97,12 +108,12 @@
                     <div class="skill-card"><span class="icon"><i class="fa-solid fa-database"></i></span> MySQL</div>
                 </div>
             </div>
-                </div>
-                <h3>Databases & Data Engineering</h3>
-                <div class="skills-list">
-                    <div class="skill-card"><span class="icon"><i class="fa-solid fa-database"></i></span> MySQL</div>
-                </div>
-            </div>
+        </div>
+        <h3>Databases & Data Engineering</h3>
+        <div class="skills-list">
+            <div class="skill-card"><span class="icon"><i class="fa-solid fa-database"></i></span> MySQL</div>
+        </div>
+        </div>
         </div>
     </section>
 
