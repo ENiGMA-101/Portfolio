@@ -185,19 +185,6 @@
             </div>
         </div>
     </footer>
-    <script>
-        window.addEventListener('scroll', function () {
-            const indicator = document.getElementById('scroll-indicator');
-            const skills = document.getElementById('skills');
-            if (!indicator || !skills) return;
-            const skillsTop = skills.getBoundingClientRect().top;
-            if (skillsTop < window.innerHeight && skillsTop > 0) {
-                indicator.classList.add('hide');
-            } else {
-                indicator.classList.remove('hide');
-            }
-        });
-    </script>
 </body>
 
 </html>
