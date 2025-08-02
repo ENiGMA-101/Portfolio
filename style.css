@@ -134,7 +134,13 @@ nav {
   min-width: 350px; max-width: 420px; outline: none;
   transition: box-shadow 0.2s, background 0.2s;
 }
+.project-list {
+  display: flex;
+  gap: 24px;     
+  justify-content: center;
+}
 .project-card {
+  width: 320px;
   background: #17213b;
   border-radius: 12px;
   padding: 18px;
