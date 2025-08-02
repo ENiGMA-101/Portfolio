@@ -63,6 +63,8 @@ nav {
     color: #51a5fb;
 }
 
+/* ...existing styles... */
+
 /* Hamburger icon styles */
 .nav-toggle {
     display: none;
@@ -74,6 +76,7 @@ nav {
     z-index: 3;
 }
 
+/* Hamburger bars */
 .nav-toggle .bar {
     width: 28px;
     height: 3px;
@@ -87,45 +90,57 @@ nav {
 @media (max-width: 540px) {
     nav {
         padding: 10px 8px;
+        position: relative;
     }
 
     .nav-toggle {
         display: flex;
+        position: absolute;
+        top: 14px;
+        right: 18px;
     }
 
     .nav-links {
         flex-direction: column;
         gap: 20px;
-        position: absolute;
-        top: 54px;
-        left: 0;
+        position: fixed;
+        top: 0;
         right: 0;
+        width: 72vw;
+        max-width: 270px;
+        height: 100vh;
         background: #17213b;
-        padding: 24px 0 16px 24px;
-        box-shadow: 0 8px 24px #0006;
-        border-radius: 0 0 12px 12px;
+        padding: 54px 0 16px 32px;
+        box-shadow: -4px 0 24px #0006;
+        border-radius: 0 0 0 12px;
         display: none;
-        animation: fadein 0.3s;
+        animation: slidein .3s;
+        z-index: 10;
     }
 
     .nav-links.open {
         display: flex;
     }
 
-    @keyframes fadein {
+    @keyframes slidein {
         from {
             opacity: 0;
-            transform: translateY(-10px);
+            right: -100px;
         }
 
         to {
             opacity: 1;
-            transform: translateY(0);
+            right: 0;
         }
     }
 
     .nav-links li {
         font-size: 1.08rem;
+    }
+
+    .logo {
+        position: relative;
+        z-index: 11;
     }
 }
 
