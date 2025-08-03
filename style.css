@@ -177,7 +177,17 @@ nav {
   text-align: center;
   margin: 18px;
   color: var(--text-light);
+  transition: 
+    box-shadow 0.2s cubic-bezier(0.54,0.12,0.32,1),
+    transform 0.2s cubic-bezier(0.54,0.12,0.32,1);
+  /* Always visible, but animated on hover */
 }
+
+.project-card:hover {
+  box-shadow: 0 16px 48px 0 rgba(22,34,51,0.22), 0 2px 8px 0 rgba(0,0,0,0.11);
+  transform: scale(1.05) translateY(-2px);
+}
+
 .project-card a {
   color: inherit;
   text-decoration: none;
@@ -201,58 +211,61 @@ nav {
   position: relative;
 }
 
-/* --- Terminal Card Redesign: Like sabbirhosen.dev --- */
-
-/* Container for popup effect */
 .hero-right {
   position: relative;
-  min-height: 260px; /* optional, ensures container for popup */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  min-width: 340px;
 }
 
-/* --- Terminal Card Like sabbirhosen.dev: Always Visible, Hover Elevates --- */
+/* --- Terminal Card --- */
 .hero-right {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  min-width: 620px; /* To make room for wider terminal */
 }
 
-/* Terminal card is always visible, not hidden or positioned absolutely */
+/* --- Wider, Rectangular Terminal Card --- */
 .terminal-card {
   background: linear-gradient(135deg, #1c2331 0%, #10192b 100%);
-  border-radius: 12px;
-  box-shadow: 0 8px 32px #0a1625b3;
-  min-width: 350px;
-  max-width: 420px;
-  padding-bottom: 18px;
-  outline: none;
+  border-radius: 16px;
+  box-shadow: 0 12px 36px 0 rgba(22,34,51,0.32), 0 1.5px 4px 0 rgba(0,0,0,0.08);
+  width: 570px;
+  max-width: 98vw;
   margin: 0 auto;
   border: none;
-  position: relative;
   transition:
-    box-shadow 0.32s cubic-bezier(0.54,0.12,0.32,1),
-    transform 0.32s cubic-bezier(0.54,0.12,0.32,1);
+    box-shadow 0.2s cubic-bezier(0.54,0.12,0.32,1),
+    transform 0.2s cubic-bezier(0.54,0.12,0.32,1);
+  position: relative;
+  padding-bottom: 0;
 }
 
-/* Elevate and scale up on hover */
-.terminal-card:hover,
-.hero-right:hover .terminal-card {
-  box-shadow: 0 24px 48px 0 rgba(22,34,51,0.52), 0 2px 8px 0 rgba(0,0,0,0.14);
-  transform: scale(1.05) translateY(-3px);
+.terminal-card:hover {
+  box-shadow: 0 20px 52px 0 rgba(22,34,51,0.48), 0 2px 8px 0 rgba(0,0,0,0.14);
+  transform: scale(1.04) translateY(-2px);
 }
 
-/* --- Terminal Content Styles as before --- */
+/* Terminal header */
 .terminal-header {
-  padding: 11px 18px 9px 18px;
+  padding: 2px 8px 8px 24px;
   display: flex;
   align-items: center;
   gap: 8px;
   background: rgba(29, 38, 54, 0.97);
-  border-radius: 12px 12px 0 0;
-  min-height: 32px;
+  border-radius: 16px 16px 0 0;
+  min-height: 39px;
 }
 
 .dot {
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 11px;
+  height: 11px;
   border-radius: 50%;
   margin-right: 4px;
   box-shadow: 0 0 0 2px #222a36;
@@ -263,21 +276,23 @@ nav {
 
 .terminal-title {
   color: #b7c4d9;
-  font-size: 0.97rem;
-  font-weight: 500;
+  font-size: 1.07rem;
+  font-weight: 200;
   margin-left: auto;
   letter-spacing: 0.1em;
   opacity: 0.85;
 }
 
+/* Terminal content */
 .terminal-content {
   font-family: 'Fira Mono', 'Consolas', monospace;
-  font-size: 1.01rem;
-  padding: 17px 26px 12px 26px;
+  font-size: 1.09rem;
+  padding: 7px 12px 5px 15px;   /* reduce top/bottom padding */
+  min-height: 10px;   
   background: transparent;
-  min-height: 110px;
+  /* min-height: 130px; */
   letter-spacing: 0.02em;
-  line-height: 2.0;
+  line-height: 1.2;
   color: #31ffc7;
 }
 
@@ -294,15 +309,87 @@ nav {
   font-weight: 500;
 }
 
-@media (max-width: 900px) {
+/* Experience line below terminal */
+.experience {
+  margin-top: 32px;
+  margin-left: 12px;
+  font-size: 1.07rem;
+  color: #e0e8f6;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.97;
+}
+
+.experience i {
+  font-size: 1.14em;
+  margin-right: 7px;
+  color: #31ffc7;
+}
+
+@media (max-width: 700px) {
+  .hero-right {
+    min-width: 0;
+    width: 100vw;
+  }
   .terminal-card {
-    min-width: 240px;
-    max-width: 96vw;
-    padding: 0 0 10px 0;
+    width: 98vw;
+    min-width: 0;
+    max-width: 99vw;
+    border-radius: 12px;
+    padding-bottom: 0;
+  }
+  .terminal-header {
+    padding: 11px 12px 8px 12px;
+    border-radius: 12px 12px 0 0;
+    min-height: 32px;
   }
   .terminal-content {
-    padding: 12px 10px 8px 10px;
     font-size: 0.98rem;
+    padding: 12px 8px 8px 12px;
+    min-height: 90px;
+  }
+  .experience {
+    font-size: 0.98rem;
+    margin-top: 20px;
+    margin-left: 0;
+  }
+}
+
+/* Experience line below terminal */
+.experience {
+  margin-top: 32px;
+  margin-left: 12px;
+  font-size: 1.07rem;
+  color: #e0e8f6;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.97;
+}
+
+.experience i {
+  font-size: 1.14em;
+  margin-right: 7px;
+  color: #31ffc7;
+}
+
+@media (max-width: 540px) {
+  .terminal-card {
+    width: 98vw;
+    min-width: 0;
+    max-width: 99vw;
+  }
+  .terminal-content {
+    font-size: 0.97rem;
+    padding: 12px 8px 8px 12px;
+  }
+  .experience {
+    font-size: 0.98rem;
+    margin-top: 20px;
+    margin-left: 0;
   }
 }
 /* Experience text */
