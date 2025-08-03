@@ -420,9 +420,9 @@ nav {
 }
 
 .terminal-title {
-  color: #b7c4d9;
+  color: #0961ed;
   font-size: 1.07rem;
-  font-weight: 200;
+  font-weight: 400;
   margin-left: auto;
   letter-spacing: 0.1em;
   opacity: 0.85;
@@ -436,28 +436,29 @@ nav {
   background: transparent;
   letter-spacing: 0.02em;
   line-height: 1.2;
-  color: #31ffc7;
+  color: #a631ff;
 }
 
 .terminal-line {
   display: block;
-  color: #31ffc7;
-  font-weight: 500;
+  color: #de8212;
+  font-weight: bold;
   word-break: break-word;
   white-space: pre-line;
 }
 
 .terminal-highlight {
-  color: #31ffc7;
-  font-weight: 500;
+  color: #de3206;
+  font-weight: bold;
 }
 
 .experience {
   margin-top: 32px;
   margin-left: 12px;
   font-size: 1.07rem;
-  color: #e0e8f6;
+  color: #2653a3;
   font-family: 'Segoe UI', Arial, sans-serif;
+  font-weight: bold;
   display: flex;
   align-items: center;
   gap: 8px;

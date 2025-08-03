@@ -189,16 +189,16 @@
             <div class="footer-nav">
                 <h4>Navigate</h4>
                 <ul>
-                    <li><a href="#home"><i class="fas fa-home"></i>Home</a></li>
-                    <li><a href="#skills"><i class="fas fa-code"></i>Skills</a></li>
-                    <li><a href="#projects"><i class="fas fa-project-diagram"></i>Projects</a></li>
-                    <li><a href="#education"><i class="fas fa-graduation-cap"></i>Education</a></li>
+                    <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+                    <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                    <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
                 </ul>
             </div>
             <div class="footer-content">
                 <h4>Content</h4>
                 <ul>
-                    <li><a href="#achievement"><i class="fas fa-trophy"></i>Achievement</a></li>
+                    <li><a href="#achievement"><i class="fas fa-trophy"></i> Achievement</a></li>
                 </ul>
             </div>
             <div class="footer-connect">
@@ -223,6 +223,8 @@
             var navToggle = document.querySelector('.nav-toggle');
             var navLinks = document.querySelector('.nav-links');
             var navClose = document.querySelector('.nav-close button');
+            var themeToggle = document.querySelector('.theme-toggle');
+            var body = document.body;
 
             navToggle.onclick = function () {
                 navLinks.classList.toggle('open');
@@ -232,6 +234,20 @@
                     navLinks.classList.remove('open');
                 };
             }
+
+            // Theme toggle logic
+            themeToggle.addEventListener('click', function () {
+                body.classList.toggle('light-theme');
+                // Optionally, update icon
+                var icon = themeToggle.querySelector('i');
+                if (body.classList.contains('light-theme')) {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                }
+            });
         });
     </script>
 </body>
