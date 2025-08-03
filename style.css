@@ -259,11 +259,11 @@ nav {
     flex-direction: column;
     align-items: center;
     margin: 0;
-    width: 180px;
+    width: 280px;
 }
 .achievement-gallery img {
-    width: 180px;
-    height: 180px;
+    width: 380px;
+    height: 280px;
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.14);
@@ -275,7 +275,7 @@ nav {
 .achievement-gallery figcaption {
     margin-top: 10px;
     font-size: 1em;
-    color: #b8860b;
+    color: #e7f70d;
     font-weight: 500;
     text-align: center;
 }
