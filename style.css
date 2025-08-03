@@ -315,6 +315,10 @@ nav {
   color: #fff;
 }
 
+.resume-link i {
+  font-size: 1.1em;
+}
+
 /* PROJECTS */
 .project-list {
   display: flex;
@@ -825,6 +829,7 @@ footer {
     padding: 0 10px;
   }
 }
+
 .nav-close {
   display: none;
 }
@@ -835,6 +840,7 @@ footer {
     text-align: right;
     margin-bottom: 8px;
   }
+
   .nav-close button {
     background: none;
     border: none;
