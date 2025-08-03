@@ -57,7 +57,6 @@ Portfolio/
 ## 📫 Contact
 
 - GitHub: [ENiGMA-101](https://github.com/ENiGMA-101)
-- **Telegram:** [@ENiGM_A007](https://t.me/ENiGM_A007)
 
 ---
 
