@@ -40,6 +40,10 @@
                         onclick="document.getElementById('achievement').scrollIntoView({behavior:'smooth'}); return false;">Achievement</a>
                 </li>
                 <li><a href="#"
+                        onclick="document.getElementById('hobbies').scrollIntoView({behavior:'smooth'}); return false;">My
+                        Hobbies</a>
+                </li>
+                <li><a href="#"
                         onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'}); return false;">Contact</a>
                 </li>
                 <li>
@@ -157,38 +161,6 @@
         </div>
     </section>
 
-    <!-- ...after your skills-section and before cta-banner... -->
-    <section class="hobbies-section" id="hobbies">
-        <h2>My Hobbies<span class="dot-highlight">.</span></h2>
-        <p class="hobbies-desc">What I love beyond code and computers.</p>
-        <div class="hobbies-list">
-            <div class="hobby-card">
-                <span class="hobby-icon"><i class="fa-solid fa-book-open"></i></span>
-                <span class="hobby-title">Reading Books</span>
-            </div>
-            <div class="hobby-card">
-                <span class="hobby-icon"><i class="fa-solid fa-music"></i></span>
-                <span class="hobby-title">Listening Music</span>
-            </div>
-            <div class="hobby-card">
-                <span class="hobby-icon"><i class="fa-solid fa-chess-board"></i></span>
-                <span class="hobby-title">Playing Chess</span>
-            </div>
-            <div class="hobby-card">
-                <span class="hobby-icon"><i class="fa-solid fa-person-hiking"></i></span>
-                <span class="hobby-title">Traveling</span>
-            </div>
-            <div class="hobby-card">
-                <span class="hobby-icon"><i class="fa-solid fa-camera-retro"></i></span>
-                <span class="hobby-title">Photography</span>
-            </div>
-            <div class="hobby-card">
-                <span class="hobby-icon"><i class="fa-solid fa-gamepad"></i></span>
-                <span class="hobby-title">Gaming</span>
-            </div>
-        </div>
-    </section>
-
 
     <section class="cta-banner">
         <h2>Ready to Start Your Next Project?</h2>
@@ -223,12 +195,47 @@
     </section>
     <section class="education-section" id="education">
         <h2>Education<span class="dot-highlight">.</span></h2>
-        <div class="edu-list">
-            <p><strong>JSC : </strong> Golden A+ <em>(Talentpool Scholarship)</em></p>
-            <p><strong>SSC : </strong> Golden A+ <em>(Talentpool Scholarship)</em></p>
-            <p><strong>HSC : </strong> Golden A+ <em>(Talentpool Scholarship)</em></p>
-            <p><strong>University : </strong> University of Asia Pacific <span style="color: #888;">(Currently
-                    Studying)</span></p>
+        <div class="edu-timeline">
+            <div class="edu-item">
+                <div class="edu-icon"><i class="fas fa-school"></i></div>
+                <div class="edu-content">
+                    <h3>JSC</h3>
+                    <p>Golden A+ <span class="edu-scholar">Talentpool Scholarship</span></p>
+                    <p class="edu-inst"><i class="fa-solid fa-building-columns"></i> Mymensingh Zilla School, Mymensingh
+                    </p>
+                    <span class="edu-year">2016</span>
+                </div>
+            </div>
+            <div class="edu-item">
+                <div class="edu-icon"><i class="fas fa-school"></i></div>
+                <div class="edu-content">
+                    <h3>SSC</h3>
+                    <p>Golden A+ <span class="edu-scholar">Talentpool Scholarship</span></p>
+                    <p class="edu-inst"><i class="fa-solid fa-building-columns"></i> Mymensingh Zilla School, Mymensingh
+                    </p>
+                    <span class="edu-year">2019</span>
+                </div>
+            </div>
+            <div class="edu-item">
+                <div class="edu-icon"><i class="fas fa-school"></i></div>
+                <div class="edu-content">
+                    <h3>HSC</h3>
+                    <p>Golden A+ <span class="edu-scholar">Talentpool Scholarship</span></p>
+                    <p class="edu-inst"><i class="fa-solid fa-building-columns"></i> Anondo Mohon College, Mymensingh
+                    </p>
+                    <span class="edu-year">2021</span>
+                </div>
+            </div>
+            <div class="edu-item">
+                <div class="edu-icon"><i class="fas fa-university"></i></div>
+                <div class="edu-content">
+                    <h3>University of Asia Pacific</h3>
+                    <p><span class="edu-scholar">Currently Studying</span></p>
+                    <p class="edu-inst"><i class="fas fa-university"></i> University of Asia Pacific, Dhaka
+                    </p>
+                    <span class="edu-year">2023 - Present</span>
+                </div>
+            </div>
         </div>
     </section>
     <section class="achievement-section" id="achievement">
@@ -252,6 +259,38 @@
             </figure>
         </div>
     </section>
+
+    <section class="hobbies-section" id="hobbies">
+        <h2>My Hobbies<span class="dot-highlight">.</span></h2>
+        <p class="hobbies-desc">What I love beyond code and computers.</p>
+        <div class="hobbies-list">
+            <div class="hobby-card">
+                <span class="hobby-icon"><i class="fa-solid fa-book-open"></i></span>
+                <span class="hobby-title">Reading Books</span>
+            </div>
+            <div class="hobby-card">
+                <span class="hobby-icon"><i class="fa-solid fa-music"></i></span>
+                <span class="hobby-title">Listening Music</span>
+            </div>
+            <div class="hobby-card">
+                <span class="hobby-icon"><i class="fa-solid fa-chess-board"></i></span>
+                <span class="hobby-title">Playing Chess</span>
+            </div>
+            <div class="hobby-card">
+                <span class="hobby-icon"><i class="fa-solid fa-person-hiking"></i></span>
+                <span class="hobby-title">Traveling</span>
+            </div>
+            <div class="hobby-card">
+                <span class="hobby-icon"><i class="fa-solid fa-camera-retro"></i></span>
+                <span class="hobby-title">Photography</span>
+            </div>
+            <div class="hobby-card">
+                <span class="hobby-icon"><i class="fa-solid fa-gamepad"></i></span>
+                <span class="hobby-title">Gaming</span>
+            </div>
+        </div>
+    </section>
+
     <section class="contact-section" id="contact">
         <h2>Contact<span class="dot-highlight">.</span></h2>
         <div class="contact-flex">
@@ -301,6 +340,12 @@
                             onclick="document.getElementById('achievement').scrollIntoView({behavior:'smooth'}); return false;"><i
                                 class="fas fa-trophy"></i> Achievement</a></li>
                 </ul>
+                <ul>
+                    <li><a href="#"
+                            onclick="document.getElementById('hobbies').scrollIntoView({behavior:'smooth'}); return false;">
+                            <i class="fas fa-heart"></i> My Hobbies</a>
+                    </li>
+                </ul>
             </div>
             <div class="footer-connect">
                 <h4>Connect</h4>
@@ -313,7 +358,7 @@
             </div>
         </div>
         <div class="footer-copy" align="center">
-            <p>© 2025 <span>H4MDiL HA$AN</span></p>
+            <p>© 2025 <span>H4MDiL HA$AN. All rights reserved.</span></p>
         </div>
     </footer>
     <script>
