@@ -485,7 +485,7 @@ nav {
   color: #54a0ff;
   border: none;
   border-radius: 30px;
-  padding: 18px 38px;
+  padding: 9px 14px;
   font-size: 1.25rem;
   text-decoration: none;
   font-weight: 600;
@@ -562,6 +562,136 @@ nav {
   border: 1.5px solid #151f2b;
   transition: box-shadow 0.2s, border 0.2s;
 }
+.skill-card .icon {
+  font-size: 1.1rem;
+  color: var(--highlight);
+}
+
+.skills-tags {
+  margin: 32px 0 0 24px;
+}
+
+/* == Add your code below this line == */
+
+/* Skill Card Progress Bars */
+.skill-bar {
+    display: inline-block;
+    background: #232f44;
+    border-radius: 8px;
+    margin: 0 10px;
+    height: 10px;
+    width: 100px;
+    vertical-align: middle;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-fill {
+    display: inline-block;
+    height: 100%;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #51a5fb 70%, #2b7fd1 100%);
+    transition: width 0.8s;
+}
+
+.skill-percent {
+    font-size: 0.97rem;
+    font-weight: bold;
+    color: var(--highlight);
+    margin-left: 6px;
+    vertical-align: middle;
+}
+
+/* HOBBIES SECTION */
+.hobbies-section {
+  background: var(--section-bg);
+  color: var(--text-light);
+  padding: 48px 0 32px 0;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.hobbies-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-left: 24px;
+}
+
+.hobbies-desc {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin: 10px 0 32px 24px;
+}
+
+.hobbies-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 0 0 0 24px;
+}
+
+.hobby-card {
+  background: var(--secondary-bg);
+  color: var(--text-light);
+  padding: 16px 24px;
+  border-radius: 14px;
+  font-size: 1.07rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 2px 8px #111a2b0a;
+  border: 1.5px solid #151f2b;
+  transition: box-shadow 0.2s, border 0.2s, background 0.2s, color 0.2s;
+}
+
+.hobby-card:hover {
+  box-shadow: 0 4px 18px #51a5fb33;
+  border-color: var(--highlight);
+  background: var(--highlight);
+  color: #fff;
+}
+
+.hobby-icon {
+  font-size: 1.6rem;
+  color: var(--highlight);
+  transition: color 0.2s;
+}
+
+.hobby-card:hover .hobby-icon {
+  color: #fff;
+}
+
+.hobby-title {
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .hobbies-list {
+    gap: 12px;
+    margin-left: 8px;
+    flex-direction: column;
+  }
+  .hobby-card {
+    padding: 12px 14px;
+    font-size: 1rem;
+    border-radius: 10px;
+  }
+  .hobby-icon {
+    font-size: 1.2rem;
+  }
+}
+
+/* Responsive adjustments for skill bars */
+@media (max-width: 700px) {
+    .skill-bar {
+        width: 80px;
+        height: 8px;
+    }
+    .skill-percent {
+        font-size: 0.89rem;
+    }
+}
 
 .skill-card:hover,
 .tag:hover {
@@ -579,6 +709,7 @@ nav {
 .skills-tags {
   margin: 32px 0 0 24px;
 }
+
 
 /* EDUCATION */
 .edu-list p {
