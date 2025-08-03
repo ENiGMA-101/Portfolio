@@ -34,26 +34,6 @@
                 <i class="fa-solid fa-moon"></i>
             </button>
         </nav>
-        <script>
-            // Mobile nav toggle (unchanged)
-            document.querySelector('.nav-toggle').onclick = function () {
-                document.querySelector('.nav-links').classList.toggle('open');
-            };
-
-            // THEME TOGGLE FEATURE ONLY
-            document.querySelector('.theme-toggle').onclick = function () {
-                document.body.classList.toggle('light-theme');
-                // Change icon
-                var icon = document.querySelector('.theme-toggle i');
-                if (document.body.classList.contains('light-theme')) {
-                    icon.classList.remove('fa-moon');
-                    icon.classList.add('fa-sun');
-                } else {
-                    icon.classList.remove('fa-sun');
-                    icon.classList.add('fa-moon');
-                }
-            };
-        </script>
         <section class="hero" id="home">
             <div class="hero-left">
                 <div class="profile-container">
@@ -234,12 +214,15 @@
         </div>
     </footer>
     <script>
-        // Nav toggle (your code)
+        console.log("JS loaded!");
+    </script>
+    <script>
+        // Hamburger menu show/hide for mobile
         document.querySelector('.nav-toggle').onclick = function () {
             document.querySelector('.nav-links').classList.toggle('open');
         };
 
-        // Theme toggle working code
+        // Theme toggle (dark/light)
         document.querySelector('.theme-toggle').onclick = function () {
             document.body.classList.toggle('light-theme');
             var icon = document.querySelector('.theme-toggle i');
