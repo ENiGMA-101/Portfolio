@@ -15,7 +15,7 @@ I enjoy transforming ideas into interactive digital experiences.
 ## 🖥️ Live Preview
 
 Want to see my portfolio in action?  
-Visit: [Portfolio Website](https://eni-gma-101.github.io/Portfolio)
+Visit: [Portfolio Website](https://enigma-101.github.io/Portfolio/)
 
 ---
 
