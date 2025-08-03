@@ -21,6 +21,9 @@
                 <span class="bar"></span>
             </button>
             <ul class="nav-links">
+                <li class="nav-close">
+                    <button aria-label="Close navigation">&times;</button>
+                </li>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -29,7 +32,6 @@
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="Documents/CV_of_HamdilHasan.pdf" class="resume-link">Resume</a></li>
             </ul>
-            <!-- Theme toggle button ADDED -->
             <button class="theme-toggle" aria-label="Toggle theme">
                 <i class="fa-solid fa-moon"></i>
             </button>
@@ -217,23 +219,20 @@
         console.log("JS loaded!");
     </script>
     <script>
-        // Hamburger menu show/hide for mobile
-        document.querySelector('.nav-toggle').onclick = function () {
-            document.querySelector('.nav-links').classList.toggle('open');
-        };
+        document.addEventListener('DOMContentLoaded', function () {
+            var navToggle = document.querySelector('.nav-toggle');
+            var navLinks = document.querySelector('.nav-links');
+            var navClose = document.querySelector('.nav-close button');
 
-        // Theme toggle (dark/light)
-        document.querySelector('.theme-toggle').onclick = function () {
-            document.body.classList.toggle('light-theme');
-            var icon = document.querySelector('.theme-toggle i');
-            if (document.body.classList.contains('light-theme')) {
-                icon.classList.remove('fa-moon');
-                icon.classList.add('fa-sun');
-            } else {
-                icon.classList.remove('fa-sun');
-                icon.classList.add('fa-moon');
+            navToggle.onclick = function () {
+                navLinks.classList.toggle('open');
+            };
+            if (navClose) {
+                navClose.onclick = function () {
+                    navLinks.classList.remove('open');
+                };
             }
-        };
+        });
     </script>
 </body>
 
