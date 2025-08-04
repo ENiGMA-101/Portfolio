@@ -399,6 +399,32 @@
             });
         });
     </script>
+    <script>
+document.querySelector('.contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var form = e.target;
+    var data = {
+        name: form.name.value,
+        email: form.email.value,
+        subject: form.subject.value,
+        message: form.message.value
+    };
+    fetch('https://script.google.com/macros/s/AKfycbyJCOLv8vRycKa-UkTqqwollbI4IWuSwmDHi5MFaTO8iJrtB3HpZEmNr3sSr8blQGZN/exec', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: { 'Content-Type': 'application/json' }
+    })
+    .then(res => res.text())
+    .then(response => {
+        alert('Message sent!');
+        form.reset();
+        window.history.replaceState({}, document.title, window.location.pathname);
+    })
+    .catch(error => {
+        alert('Error sending message.');
+    });
+});
+</script>
 </body>
 
 </html>
