@@ -48,10 +48,23 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 2vw 4vw;
-  background: transparent;
-  position: relative;
-  width: 100%;
+  background: var(--secondary-bg);
+  position: fixed;      /* Make nav bar fixed at top */
+  top: 0;               /* Stick at top */
+  left: 0;
+  width: 100vw;
   box-sizing: border-box;
+  z-index: 1000;        /* Ensure it's above everything */
+  height: 70px;         /* Set a fixed height for consistency */
+}
+
+body {
+  background: var(--main-bg);
+  color: var(--text-light);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+  font-size: 1rem;
+  padding-top: 70px;    /* Prevent content hiding under fixed nav */
 }
 
 .logo,
