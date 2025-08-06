@@ -514,11 +514,71 @@ body.light-theme .github-btn:focus {
   border: 2px solid #232f44;
   display: flex;
   flex-direction: column;
+  transition: all 0.3s ease;
 }
 
 .terminal-card:hover {
   box-shadow: 0 20px 52px 0 rgba(22, 34, 51, 0.48), 0 2px 8px 0 rgba(0, 0, 0, 0.14);
   transform: scale(1.04) translateY(-2px);
+}
+
+/* Animated Glow Effect */
+.terminal-card.animated-glow {
+  animation: colorfulGlow 4s ease-in-out infinite alternate;
+  box-shadow: 
+    0 10px 36px 0 rgba(22, 34, 51, 0.28), 
+    0 2px 8px 0 rgba(0, 0, 0, 0.10),
+    0 0 20px rgba(81, 165, 251, 0.3),
+    0 0 40px rgba(255, 107, 107, 0.2),
+    0 0 60px rgba(67, 233, 123, 0.1);
+}
+
+@keyframes colorfulGlow {
+  0% {
+    box-shadow: 
+      0 10px 36px 0 rgba(22, 34, 51, 0.28), 
+      0 2px 8px 0 rgba(0, 0, 0, 0.10),
+      0 0 20px rgba(81, 165, 251, 0.4),
+      0 0 40px rgba(255, 107, 107, 0.2),
+      0 0 60px rgba(67, 233, 123, 0.1);
+    border-color: rgba(81, 165, 251, 0.6);
+  }
+  25% {
+    box-shadow: 
+      0 10px 36px 0 rgba(22, 34, 51, 0.28), 
+      0 2px 8px 0 rgba(0, 0, 0, 0.10),
+      0 0 20px rgba(255, 107, 107, 0.4),
+      0 0 40px rgba(67, 233, 123, 0.2),
+      0 0 60px rgba(81, 165, 251, 0.1);
+    border-color: rgba(255, 107, 107, 0.6);
+  }
+  50% {
+    box-shadow: 
+      0 10px 36px 0 rgba(22, 34, 51, 0.28), 
+      0 2px 8px 0 rgba(0, 0, 0, 0.10),
+      0 0 20px rgba(67, 233, 123, 0.4),
+      0 0 40px rgba(81, 165, 251, 0.2),
+      0 0 60px rgba(255, 107, 107, 0.1);
+    border-color: rgba(67, 233, 123, 0.6);
+  }
+  75% {
+    box-shadow: 
+      0 10px 36px 0 rgba(22, 34, 51, 0.28), 
+      0 2px 8px 0 rgba(0, 0, 0, 0.10),
+      0 0 20px rgba(255, 215, 0, 0.4),
+      0 0 40px rgba(197, 143, 255, 0.2),
+      0 0 60px rgba(0, 255, 179, 0.1);
+    border-color: rgba(255, 215, 0, 0.6);
+  }
+  100% {
+    box-shadow: 
+      0 10px 36px 0 rgba(22, 34, 51, 0.28), 
+      0 2px 8px 0 rgba(0, 0, 0, 0.10),
+      0 0 20px rgba(197, 143, 255, 0.4),
+      0 0 40px rgba(0, 255, 179, 0.2),
+      0 0 60px rgba(255, 215, 0, 0.1);
+    border-color: rgba(197, 143, 255, 0.6);
+  }
 }
 
 .terminal-header {
@@ -637,6 +697,30 @@ body.light-theme .github-btn:focus {
   font-weight: bold;
   margin-top: 5px;
   display: inline-block;
+}
+
+/* Terminal Cursor Animation */
+.terminal-cursor {
+  color: #00ffb3;
+  font-weight: bold;
+  animation: blinkCursor 1.2s infinite;
+  font-size: 1.1em;
+}
+
+@keyframes blinkCursor {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+/* Terminal highlight for welcome message */
+.terminal-highlight {
+  color: #51a5fb;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(81, 165, 251, 0.5);
 }
 
 @media (max-width: 900px) {
